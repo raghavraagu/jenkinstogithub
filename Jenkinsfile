@@ -8,25 +8,25 @@ pipeline {
             }
         }
         stage ("run on slave1 code") {
-            agent { label "slave1"}
+            agent { label "php-java-slave1"}
             steps {
                 sh "hostname -I"
             }
         }
         stage ("run on slave2 code") {
-            agent { label "slave2"}
+            agent { label "go-slave2"}
             steps {
                 sh "hostname -I"
             }
         }
         stage ("run on slave3 code") {
-            agent { label "slave3"}
+            agent { label "angular-slave3"}
             steps {
                 sh "hostname -I"
             }
         }
         stage ("run on slave4 code") {
-            agent { label "slave4"}
+            agent { label "react-slave4"}
             steps {
                 sh "hostname -I"
             }
