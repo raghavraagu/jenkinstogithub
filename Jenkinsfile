@@ -31,17 +31,5 @@ pipeline {
                 sh "hostname -I"
             }
         }
-         stage ("run on slave5 code") {
-            agent { label "slave5"}
-            steps {
-                sh "hostname -I"
-            }
-        }
-        stage ("run on slave6 code") {
-            agent { label "slave6"}
-            steps {
-                sh "hostname -I"
-            }
-        }
     }
 }
